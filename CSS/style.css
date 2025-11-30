@@ -247,7 +247,7 @@ a:hover {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
-    background-image: url(images/LoginBackground.jpg);
+    background-image: url(../images/LoginBackground.jpg);
     background-size: cover;
     padding: 15px;
     border-radius: 8px;
