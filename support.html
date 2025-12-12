@@ -1,45 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<nav>
-    <!--Navigation bar with links-->
-    <ul>
-        <img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="think.html">Think</a></li>
-        <li><a href="library.html">Library</a></li>
-        <li><a href="support.html">Support</a></li>
-        <li><a href="login.html">Login</a></li>
-    </ul>
-</nav>
-<link rel="stylesheet" href="CSS/style.css"> <!--Link to external CSS Styling-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<title>Update My Research</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Update My Research</title>
 </head>
-<body id class="body">
-    <h1>Update My Research</h1>
-    <p class="Toolkit-description">
-        Online Coding Services for managing and enhancing your coding projects.
+
+<body class="body">
+  <nav>
+    <img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80" alt="Brand Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="think.html">Think</a></li>
+      <li><a href="library.html">Library</a></li>
+      <li><a href="support.html">Support</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  <h1 class="header">Need help? We're here to support you. Real-time assistance, and expert consulting, we've got you covered.</h1>
+  <div>
+  <section class="help-desk" aria-label="Help desk ticket form">
+    <h2>Submit a Support Ticket</h2>
+    <p>Fill out the form below to get assistance from our support team. (24/7 availability)</p>
+    <form class="help-desk__form" id="help-desk-form">
+      <label for="ticket-name">Your Name</label>
+      <input type="text" id="ticket-name" name="ticket-name" placeholder="Enter your full name" required>
+
+      <label for="ticket-email">Email Address</label>
+      <input type="email" id="ticket-email" name="ticket-email" placeholder="your.email@example.com" required>
+
+      <label for="ticket-category">Issue Category</label>
+      <select id="ticket-category" name="ticket-category" required>
+        <option value="">-- Select a category --</option>
+        <option value="technical">Technical Issue</option>
+        <option value="account">Account & Billing</option>
+        <option value="feature">Feature Request</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="ticket-description">Description</label>
+      <textarea id="ticket-description" name="ticket-description" rows="6" placeholder="Please describe your issue in detail..." required></textarea>
+
+      <button type="submit" id="ticket-submit">Submit Ticket</button>
+    </form>
+    <div id="ticket-confirmation" class="help-desk__confirmation" style="display:none;">
+      <!-- Confirmation message renders here -->
+    </div>
+  </section>
+  </div>
+  <footer>
+    <p>
+      <a href="login.html">Sign Up Here!</a>
     </p>
-    <!-- Beginning of paragraphs (3) total, plus divisions for spacing. -->
-    <div>
-        <h2 class="our-services">24/7 coding services.</h2>
-        <img src="images/Support.jpg" height= "220px" width="220px" alt="Coding Services" class="Juggling-Image">
-        <p>
-            Real-time Assistance: Get instant help with coding issues, <br> debugging, and optimization.
-        </p>
-        <p>
-            Custom Solutions: Tailored coding solutions <br> to meet your specific project needs.
-        <p>
-            Expert Consulting: Get help from <br> seasoned developers to optimize your projects.
-        </p>
-    </div>
-    <!-- Final link for website direct line. -->
-    <div>
-        <p>
-            <a href="login.html">Sign Up Now!</a>
-        </p>
-    </div>
+    <p>&copy; 2025 Update My Research. All rights reserved.</p>
+  </footer>
+  <script src="JavaScript/script.js"></script>
 </body>
 </html>

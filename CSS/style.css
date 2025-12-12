@@ -1,55 +1,27 @@
-/* Navigation Bar Styles  */
-/* Position the navigation bar at the top */
-nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: #1c2331;
-  padding: 10px 0;
-}
-
-/* Remove default list styles and enable Flexbox for the list container */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-}
-
-/* Style the links inside the list */
-nav li a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: white;
-}
-
-/* Hover effect */
-nav li a:hover {
-  background-color: #028c9e;
-}
-
+/* ========================
+   CSS VARIABLES
+   ======================== */
 :root {
-    /* Define color palette using CSS variables for consistency */
     --primary-bg-color: #0b0f19;
     --secondary-bg-color: #1c2331;
     --border-color: #00bcd4;
     --primary-text-color: #e3f2fd;
     --accent-color: #8c9eff;
     --link-hover-color: #ffffff;
-
-    /* Setup the font family stack*/
     --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     --font-family-mono: 'Courier New', Courier, monospace;
 }
 
-/* Reset box-sizing for consistent element sizing */
+/* ========================
+   GLOBAL RESET
+   ======================== */
 * {
     box-sizing: border-box;
 }
 
-/* Set the overall page style */
+/* ========================
+   BODY & LAYOUT
+   ======================== */
 body {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
@@ -57,107 +29,98 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 140px;
 }
 
-.Toolkit-description {
-    font-size: large;
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 20px;
-}
-
-/* Ensure images are responsive and not too large */
-img {
-    display: block;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-}
-
-.Login-Image {
-    float: right;
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-
-.Toolkit-Image {
-    float: right;
-    margin-right: 20px;
-    margin-left: 100px;
-    margin-top: -60px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.Juggling-Image {
-    float: right;
-    margin-left: 20px;
-    margin-right: 100px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-
-.our-services {
-   text-align: center;
-    color: #ffffff;
-    font-size: large;
-    font-weight: bold;
-}
-
-/* Layout and Structure */
 .body {
     max-width: 960px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-/* Main content boxes and containers */
-div {
-    background-color: var(--secondary-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+
+.header {
+    font-style: times-new-roman, serif;
+    text-align: center;
+    font-size: 30px;
+    color: #8c9eff;
+    /*add padding bewteen header and nav*/
+    padding-top: 100px;
 }
 
-/* Navigation */
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+/* ========================
+   NAVIGATION
+   ======================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: var(--secondary-bg-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 10px 20px;
+    z-index: 1000;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
-    
 }
 
-.navbar {
-    width: 100%;
-    background-color: var(--secondary-bg-color);
-    border-bottom: 1px solid var(--border-color);
-    margin-bottom: 20px;
+nav ul li {
+    margin: 0;
 }
 
-.navbar li a {
+nav li a {
     display: block;
-    padding: 10px 15px;
+    padding: 12px 16px;
     text-decoration: none;
     color: var(--primary-text-color);
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
+nav li a:hover {
+    background-color: #028c9e;
     color: var(--link-hover-color);
 }
 
-/* Font styling */
+#branding-logo {
+    margin: 0;
+    display: block;
+}
+
+/* ========================
+   TYPOGRAPHY
+   ======================== */
+
+.highlight-title {
+  color: #028c9e;
+  font-size: larger; /* pick your color */
+}
+
+.italic-text {
+  font-style: italic;
+  color: white
+}
+
+.enlargenFont {
+  font-size: 25px;
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+}
+
 h1 {
-    font-family: var(--font-family-sans);
-    font-size: 3rem;
+    font-size: calc(3rem - 5px);
     color: var(--accent-color);
     text-align: center;
     text-transform: uppercase;
@@ -166,36 +129,7 @@ h1 {
     padding-bottom: 0.5rem;
 }
 
-.How-title{
-    text-align: center;
-    color: #ffffff;
-    font-size: large;
-    font-weight: bold;
-}
-
-.how-it-works-list {
-    color: #ffffff;
-    font-size: small;
-    margin-bottom: 10px;
-    line-height: 1.4;
-    list-style-type: disc;
-    margin-left: 20px;
-    text-align: left;
-    text-decoration: none;
-    font-weight: normal;
-    text-transform: lowercase;
-}
-
-.h2 {
-    font-family: var(--font-family-sans);
-    font-size: 1.8rem;
-    text-align: center;
-    color: var(--border-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 h2 {
-    font-family: var(--font-family-sans);
     font-size: 1.8rem;
     text-align: center;
     color: var(--border-color);
@@ -207,7 +141,6 @@ p {
     font-size: 1rem;
     color: var(--primary-text-color);
     margin: 1em 0;
-    align-content: center;
 }
 
 em {
@@ -215,7 +148,9 @@ em {
     font-style: normal;
 }
 
-/* Make links pop with the accent color */
+/* ========================
+   LINKS
+   ======================== */
 a {
     color: var(--accent-color);
     text-decoration: none;
@@ -227,63 +162,247 @@ a:hover {
     color: var(--link-hover-color);
     border-bottom-color: var(--link-hover-color);
 }
-.logo-and-heading {
-  overflow: auto;
+
+/* ========================
+   CONTAINERS
+   ======================== */
+div {
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    overflow: auto; /* Ensures container wraps floated images */
+    min-height: fit-content;
+}
+
+.container{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-container {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 15px;
+}
+
+.text-container p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.form-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ========================
+   IMAGES
+   ======================== */
+
+.background-image {
+    background-image: url(../images/LoginBackground.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    position:static;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    padding-top: 30px;
+}
+
+.SignUp {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 0 auto;
+    display: block;
+}
+img {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+    flex-shrink: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+.index-Image {
+    float: left;
+    flex-direction: column;
+    max-width: 220px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+.Juggling-Image {
+    float: right;
+    max-width: 220px;
+    height: auto;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+.slideShow-Image {
+    float: bottom;
+}
+
+/* Image-button wrapper for slideshow */
+.image-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+
+.image-button-wrapper img {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0;
+}
+
+/* Ensure slideshow image ignores generic Juggling-Image float/margins inside wrapper */
+.image-button-wrapper .Juggling-Image {
+    float: none;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+.image-button-wrapper button {
+    width: 100%;
+    padding: 8px 0;
+    font-size: 0.9rem;
+}
+
+/* Position Think image to the left of its text */
+.indexThink {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+/* ========================
+   UTILITY CLASSES
+   ======================== */
+.Toolkit-description {
+    font-size: large;
+    text-align: center;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
-#branding-logo {
-  float: left;
-  margin-right: 450px;
-}
-.logo-and-heading h1 {
-  line-height: 70px;
-  margin: 0;
+.our-services {
+    text-align: center;
+    color: #ffffff;
+    font-size: large;
+    font-weight: bold;
 }
 
-/* Container for the input and image */
-.input-with-icon {
-    display: flex left;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-    background-image: url(../images/LoginBackground.jpg);
-    background-size: cover;
-    padding: 15px;
+/* ========================
+   DISCUSSION BOARD
+   ======================== */
+.discussion-board {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--secondary-bg-color);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Style for the image/icon inside the container */
-.input-icon {
-    width: 24px;
-    height: auto;
-    border: none;
-    box-shadow: none;
-    display: inline-block;
+.discussion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
-/* Style for the input field */
-.input-with-icon input[type="text"] {
-    padding: 10px;
-    text-align: justify;
-    font-size: 1rem;
+.discussion-form input[type="text"],
+.discussion-form textarea {
+    width: 100%;
+}
+
+.discussion-form button {
+    width: auto;
+    align-self: flex-start;
+}
+
+.discussion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.discussion-post {
+    padding: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
-    font-family: var(--font-family-sans);
-    width: 200px;
+    border-radius: 6px;
 }
 
-/* Form styling */
+.discussion-post h3 {
+    margin: 0 0 6px 0;
+    color: var(--accent-color);
+}
+
+.discussion-post p {
+    margin: 4px 0;
+}
+
+.meta {
+    font-size: 0.85rem;
+    color: #b3c4ff;
+}
+
+/* ========================
+   FORMS
+   ======================== */
+form p {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
 textarea {
-    width: 30%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    width: 100%;
+    padding: 8px;
     border: 1px solid var(--border-color);
     border-radius: 4px;
     background-color: var(--primary-bg-color);
@@ -291,53 +410,47 @@ textarea {
     font-family: var(--font-family-sans);
     font-size: 1rem;
 }
+
 input[type="submit"],
 button {
     background-color: var(--border-color);
-
-
     color: var(--primary-bg-color);
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 10px 30px;
+    width: 100%;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
 }
+
 input[type="submit"]:hover,
 button:hover {
     background-color: var(--accent-color);
 }
-/* Table styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 2rem;
-}
-th, td {
-    border: 1px solid var(--border-color);
-    padding: 0.75rem;
-    text-align: left;
-}
-th {
-    background-color: var(--secondary-bg-color);
-    color: var(--border-color);
-}
-tr:nth-child(even) {
-    background-color: rgba(28, 35, 49, 0.5);
-}
 
-
-/*---Footer---*/
+/* ========================
+   FOOTER
+   ======================== */
 footer {
     text-align: center;
-    padding: 1rem 0;
+    padding: 20px;
     background-color: var(--secondary-bg-color);
-    border-top: 1px solid var(--border-color);
+    border-top: 2px solid var(--border-color);
     color: var(--primary-text-color);
-    margin-top: 2rem;
+    margin-top: 40px;
+    /* Make footer span full viewport width regardless of parent max-width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer p {
+    margin: 0.5rem 0;
 }
 
 footer a {
@@ -346,4 +459,38 @@ footer a {
 
 footer a:hover {
     color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+/* ========================
+   RESPONSIVE DESIGN
+   ======================== */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .body {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav li a {
+        padding: 10px;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+    }
 }

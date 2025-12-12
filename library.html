@@ -2,8 +2,16 @@
 <html lang="en">
 
 <head>
-    <nav> <!--Navigation bar with links-->
-    <ul><img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80">
+  <link rel="stylesheet" href="CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Update My Research</title>
+</head>
+
+<body class="body">
+  <nav>
+    <img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80" alt="Brand Logo">
+    <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="think.html">Think</a></li>
       <li><a href="library.html">Library</a></li>
@@ -11,40 +19,28 @@
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-  <link rel="stylesheet" href="CSS/style.css"> <!--Link to external CSS Styling-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Update My Research</title>
-</head>
+  <h1 class="header">Explore our extensive database to find relevant literature and resources for your research.</h1>
+  <section class="library-search" aria-label="Library search">
+    <div class="library-search__controls">
+      <h2>Peer-reviewed Articles/Journals</h2>
+      <label for="library-query"></label>
+      <div class="library-search__input-row">
+        <input type="search" id="library-query" name="library-query" placeholder="e.g. renewable energy policy">
+        <button type="button" id="library-search-btn">Search</button>
+      </div>
+      <p class="library-search__hint">Search matches titles and descriptions. Leave blank to show all.</p>
+    </div>
+    <div id="library-results" class="library-search__results" aria-live="polite">
+      <!-- Results render here -->
+    </div>
+  </section>
 
-<body id class="body">
-  <h1>Update My Research</h1>
-
-      <p class="Toolkit-description">
-       Access a Wealth of Resources to Support Your Research Journey.
-      </p>
-    <!-- Begining to paragraphs (3) total, plus divisions for spacing. -->
-  <div>
-    <h2 class="our-services">Library</h2>
-      <img id="myImage" src="images/library.jpg" alt="Library" width="220" height="220" alignment="right" class="Juggling-Image">
-      <button type="button" onclick="nextImage()">Next</button>
+  <footer>
     <p>
-        Extensive Database: Explore a vast collection of academic papers, articles, and books across various disciplines.
+      <a href="login.html">Sign Up Here!</a>
     </p>
-
-    <p>
-      Easy Search & Filter: Quickly find relevant resources using advanced search and filtering options.
-    </p>
-      <p>
-        Peer Reviews & Ratings: Access community reviews and ratings to identify high-quality materials.
-    </p>
-   </div>
-    <!-- Final link for website direct line. -->
-  <div>
-    <p>
-      <a href="login.html">Sign Up Now!</a>
-    </p>
-  </div>
-<script src="JavaScript/script.js"></script>
+    <p>&copy; 2025 Update My Research. All rights reserved.</p>
+  </footer>
+  <script src="JavaScript/script.js"></script>
 </body>
 </html>

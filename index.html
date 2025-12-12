@@ -2,8 +2,17 @@
 <html lang="en">
 
 <head>
-    <nav> <!--Navigation bar with links-->
-    <ul><img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80">
+  <link rel="stylesheet" href="CSS/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <script src="JavaScript/script.js"></script>
+  <title>Update My Research</title>
+</head>
+
+<body class="body">
+  <nav>
+    <img src="images/BrandingImage.jpg" id="branding-logo" height="70" width="80" alt="Brand Logo">
+    <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="think.html">Think</a></li>
       <li><a href="library.html">Library</a></li>
@@ -11,39 +20,46 @@
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
-  <link rel="stylesheet" href="CSS/style.css"> <!--Link to external CSS Styling-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Update My Research</title>
-</head>
 
-<body id class="body">
-  <h1>Update My Research</h1>
+  <h1 class="header"><span class="highlight-title">UpdateMyResearch</span> is an open-source website, where scientists can <span class="italic-text">collect</span>, <span class="italic-text">store</span>, and <span class="italic-text">manage</span> their research data efficiently and collaboratively.</h1>
 
-      <p class="Toolkit-description">
-        Welcome to "Update My Research," the go-to platform for managing and enhancing your research projects.
-      </p>
-    <!-- Begining to paragraphs (3) total, plus divisions for spacing. -->
   <div>
-    <h2 class="our-services">Our Toolkit</h2>
-      <img src="images/DataFlow.jpg" height= "220px" width="220px" alt="Data Managment" class="Juggling-Image">
-    <p>
-     Seamless Management: Centralize and organize <br> research materials, from literature reviews to experimental data.
-    </p>
-    <p>
-    Work together on projects by sharing documents, <br> annotating sources, and tracking changes in real-time.
-    <p>
-      Advanced Analytics: Leverage powerful data analysis <br> visualization tools to derive insights from your research.
-    </p>
-
-  
-   </div>
-    <!-- Final link for website direct line. -->
-  <div>
-    <p>
-      <a href="login.html">Sign Up Now!</a>
-    </p>
+    <h2>Check out the toolkit features:</h2>
+     <img src="images/DataFlow.jpg" height= "220px" width="220px" alt="Data Managment" class="Juggling-Image">
+    <ul>
+      <li>Data Organization: Structure and categorize your research data for easy access and retrieval.</li>
+      <li>Collaboration Tools: Share data and collaborate with team members in real-time.</li>
+      <li>Version Control: Track changes and maintain different versions of your datasets.</li>
+      <li>Metadata Management: Add descriptive metadata to enhance data discoverability.</li>
+      <li>Data Sharing: Facilitate secure data sharing with external collaborators or the public.</li>
+    </ul>
   </div>
 
+  <div>
+    <h2>Collaborate and discuss ideas on research projects</h2>
+    <img class="indexThink Juggling-Image" src="images/Think.jpg" height="220px" width="220px" alt="Data Managment">
+    <p><span class="enlargenFont">Join forums and discussion groups to exchange knowledge and receive feedback. Integrated chat features enable real-time communication and collaboration.</span></p>
+  </div>
+
+  <div class="image-button-wrapper">
+    <h2>Access a wealth of studies and research materials in a library format.</h2>
+    <img id="myImage" src="images/book.jpg" height="220px" width="220px" alt="Library Image" class="Juggling-Image">
+    <button type="button" onclick="nextImage()">Next</button>
+  </div>
+
+  <div>
+    <h2>Get support and assistance for your research data management needs.</h2>
+    <img src="images/Support.jpg" height= "220px" width="220px" alt="Coding Services" class="Juggling-Image">
+    <p><span class="enlargenFont">Contact our support team for help with technical issues or questions about using the platform.</span></p>
+    <p><span class="enlargenFont">Access FAQs and tutorials to guide you through common tasks and features.</span></p>
+
+  </div>
+
+  <footer>
+    <p>
+      <a href="login.html">Sign Up Here!</a>
+    </p>
+    <p>&copy; 2025 Update My Research. All rights reserved.</p>
+  </footer>
 </body>
 </html>
